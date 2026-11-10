@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keshavatearth — the world</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      window.__errs = [];
+      (function(){
+        var ce = console.error.bind(console);
+        console.error = function(){ var a=[].slice.call(arguments);
+          window.__errs.push(a.map(function(x){return String((x&&x.stack)||x)}).join(" | ").slice(0,900)); ce.apply(null,a); };
+        window.addEventListener("error", function(e){ window.__errs.push("WE: "+String((e.error&&e.error.stack)||e.message).slice(0,900)); });
+        window.addEventListener("unhandledrejection", function(e){ window.__errs.push("REJ: "+String((e.reason&&e.reason.stack)||e.reason).slice(0,900)); });
+      })();
+    </script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+      * { box-sizing: border-box; }
+      @keyframes shimmer { from { transform: translateX(-60%);} to { transform: translateX(280%);} }
+      @keyframes cardIn { from { opacity: 0; transform: translateY(-8px) scale(.98); } to { opacity: 1; transform: none; } }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.25); border-radius: 3px; }
+      button { font-family: inherit; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
